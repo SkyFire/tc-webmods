@@ -1,0 +1,41 @@
+table.stats_table {
+    background-image: url(tile.png);
+	background: #CCCCCC;
+	margin-bottom:20px;
+}
+
+td.stats_td {
+	background-color:#FFFFFF;
+	font-size:9pt;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+
+th.stats_th {
+	background: #999999;
+	font-size:9pt;
+	text-align: left;
+	color:#FFFFFF;
+}
+
+
+
+tr.stats_head th {
+    background-image: url(table_tile.png); 
+	text-align:center;
+	font-size:10pt;
+	color:#FFFFFF;
+	padding:5px;
+	background-color: #A2AEDF;
+}
+
+.footer {
+	font-size:7pt;
+	margin:10px 0 10px 0;
+}
+
+.error {
+	color:#FF0000;
+}
