@@ -41,8 +41,8 @@ fclose($sock);
 <?php
 // MySQL settings
 $WoWHostname = "x.x.x.x"; // MySQL server address
-$WoWUsername = "root"; // MySQL username
-$WoWPassword = "mysql42bgzs"; // MySQL password
+$WoWUsername = "user"; // MySQL username
+$WoWPassword = "pass"; // MySQL password
 $CharacterDatabase = 'characters'; // TC characters database
 $RealmDatabase = 'realmd'; // TC relamd database
 $WorldDatabase = 'world'; // TC world database

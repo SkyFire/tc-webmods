@@ -10,7 +10,7 @@ $ip_auth = "x.x.x.x";
 // Enter your Realm server port (3724 = Deafult TCWorld Port)
 $port_auth = "3724";
 
-if (! $sock = @fsockopen($address, $port_world, $num, $error, 3)) 
+if (! $sock = @fsockopen($ip_world, $port_world, $num, $error, 3)) 
 echo '<table width=\"100%\" border=0 cellspacing=0 cellpadding=3>
   <tr>
     <td align=\"left\" valign=\"middle\">Game Server:</td>
@@ -23,7 +23,7 @@ echo '<table width=\"100%\" border=0 cellspacing=0 cellpadding=3>
 fclose($sock);
 } 
 
-if (! $sock = @fsockopen($address, $port_world, $num, $error, 3)) 
+if (! $sock = @fsockopen($aip_auth, $port_auth, $num, $error, 3)) 
 echo '<table width=\"100%\" border=0 cellspacing=0 cellpadding=3>
   <tr>
     <td align=\"left\" valign=\"middle\">Login Server:</td>
@@ -39,13 +39,13 @@ fclose($sock);
   
 <?php
 // MySQL settings
-$WoWHostname = "your.server.ip";
-$WoWUsername = "root";
-$WoWPassword = "XXXX";
-$CharacterDatabase = 'characters';
-$RealmDatabase = 'realmd';
-$WorldDatabase = 'world';
-$CharacterDatabaseEncoding = 'utf8'; 
+$WoWHostname = "x.x.x.x"; // MySQL server address
+$WoWUsername = "username"; // MySQL username
+$WoWPassword = "password"; // MySQL password
+$CharacterDatabase = 'characters'; // TC characters database
+$RealmDatabase = 'realmd'; // TC relamd database
+$WorldDatabase = 'world'; // TC world database
+$CharacterDatabaseEncoding = 'utf8'; // database character encoding
 
 // DO NOT EDIT BELOW HERE IF YOU DON'T KNOW WHAT IT IS!!!
 $WoWconn = mysql_connect($WoWHostname, $WoWUsername, $WoWPassword) or die('Connection failed: ' . mysql_error());
