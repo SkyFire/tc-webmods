@@ -1,4 +1,5 @@
 <?php
+$Address = 'your.domain.name/folder'; // Stats script root folder > Example: www.mydomain.name/stats
 $Hostname = 'x.x.x.x';
 $Username = 'user';
 $Password = 'pass';
@@ -55,13 +56,13 @@ $Result =
 '<?xml-stylesheet type="text/xsl" href="stat.xsl" ?>'."\r\n".
 "  <serverpage>\r\n".
 "    <status>\r\n".
-"      <platform>".$dbversion."</platform>\r\n".
-"      <servername>".$RealmName."</servername>\r\n".
-"      <uptime>".$uptime."</uptime>\r\n".
-"      <oplayers>".$total."</oplayers>\r\n".
-"      <alliance>".$alliance."</alliance>\r\n".
-"      <horde>".$horde."</horde>\r\n".
-"      <peakcount>".$maxplayers."</peakcount>\r\n".
+"      <platform>". $dbversion ."</platform>\r\n".
+"      <servername>". $RealmName ."</servername>\r\n".
+"      <uptime>". $uptime ."</uptime>\r\n".
+"      <oplayers>". $total ."</oplayers>\r\n".
+"      <alliance>". $alliance ."</alliance>\r\n".
+"      <horde>". $horde ."</horde>\r\n".
+"      <peakcount>". $maxplayers ."</peakcount>\r\n".
 "    </status>\r\n".
 "    <gms>\r\n";
   $db_result = mysql_query("SELECT * FROM `characters` WHERE `online`='1' AND `extra_flags` > 4 ORDER BY `name`", $Trinity_db)or die(mysql_error()); //only grabs GMs with their GM tag turned on
@@ -70,15 +71,15 @@ $Result =
     $db_result2 = mysql_query("SELECT gmlevel FROM `account_access` WHERE `id`='".$result['account']."'", $realm_db);
     $result2 = mysql_fetch_array($db_result2);
            $Result .= "      <gmplr>\r\n".
-    "        <name>".$result['name']."</name>\r\n".
-    "        <race>".$result['race']."</race>\r\n".
-    "        <class>".$result['class']."</class>\r\n".
-    "        <gender>".$result['gender']."</gender>\r\n".
-    "        <level>".$result['level']."</level>\r\n".
-    "        <map>".$result['map']."</map>\r\n". 
-    "        <areaid>".$result['zone']."</areaid>\r\n".  //requires extra table not in Trinity by default (zone_coordinates)
-    "        <ping>".$result['latency']."</ping>\r\n".  //ping not stored in DB by Trinity at this time.
-    "        <permissions>".$result2['gmlevel']."</permissions>\r\n".
+    "        <name>". $result['name'] ."</name>\r\n".
+    "        <race>". $result['race'] ."</race>\r\n".
+    "        <class>". $result['class'] ."</class>\r\n".
+    "        <gender>". $result['gender'] ."</gender>\r\n".
+    "        <level>". $result['level'] ."</level>\r\n".
+    "        <map>". $result['map'] ."</map>\r\n". 
+    "        <areaid>". $result['zone'] ."</areaid>\r\n".  //requires extra table not in Trinity by default (zone_coordinates)
+    "        <ping>". $result['latency'] ."</ping>\r\n".  //ping not stored in DB by Trinity at this time.
+    "        <permissions>". $result2['gmlevel'] ."</permissions>\r\n".
     //"        <ip>178.12.14.2</ip>\r\n".  //no need for IPs
     "      </gmplr>\r\n";
   }
@@ -90,14 +91,14 @@ $Result .= "    <sessions>\r\n";
     while($result = mysql_fetch_array($db_result))
     {
            $Result .= "      <plr>\r\n".
-    "        <name>".$result['name']."</name>\r\n".
-    "        <race>".$result['race']."</race>\r\n".
-    "        <class>".$result['class']."</class>\r\n".
-    "        <gender>".$result['gender']."</gender>\r\n".
-    "        <level>".$result['level']."</level>\r\n".
-    "        <map>".$result['map']."</map>\r\n". 
-    "        <areaid>".$result['zone']."</areaid>\r\n".  //requires extra table not in Trinity by default (zone_coordinates)
-    "        <ping>".$result['latency']."</ping>\r\n".  //ping not stored in DB by Trinity at this time.
+    "        <name>". $result['name'] ."</name>\r\n".
+    "        <race>". $result['race'] ."</race>\r\n".
+    "        <class>". $result['class'] ."</class>\r\n".
+    "        <gender>". $result['gender'] ."</gender>\r\n".
+    "        <level>". $result['level'] ."</level>\r\n".
+    "        <map>". $result['map'] ."</map>\r\n". 
+    "        <areaid>". $result['zone'] ."</areaid>\r\n".  //requires extra table not in Trinity by default (zone_coordinates)
+    "        <ping>". $result['latency'] ."</ping>\r\n".  //ping not stored in DB by Trinity at this time.
     //"        <ip>178.12.14.2</ip>\r\n".  //no need for IPs
     "      </plr>\r\n";
   }
