@@ -1,12 +1,12 @@
 <?php
-$Hostname = '192.168.1.50';
-$Username = 'root';
-$Password = 'mysql42bgzs';
+$Hostname = 'x.x.x.x';
+$Username = 'user';
+$Password = 'pass';
 $CharacterDatabase = 'characters'; // must contains characters table
 $RealmDatabase = 'realmd';  // must contains zone_coordinates and accounts table
 $TrinityDatabase = 'world';  // for uptime stats
 $ManagerDatabase = 'mmfpm'; // Used MiniManager's 'dbc_zones' table to get zone names
-$RealmName = 'Draco WoW';
+$RealmName = 'Realm Name';
 $DatabaseEncoding = 'utf8';
 
 $Output = WoWEmuStat();
