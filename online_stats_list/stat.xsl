@@ -115,6 +115,7 @@
 					<xsl:when test="class = 3"><img src="stats/icon/class/3.gif" alt="Hunter" /></xsl:when>
 					<xsl:when test="class = 4"><img src="stats/icon/class/4.gif" alt="Rogue" /></xsl:when>
 					<xsl:when test="class = 5"><img src="stats/icon/class/5.gif" alt="Priest" /></xsl:when>
+					<xsl:when test="class = 6"><img src="stats/icon/class/6.gif" alt="Death Knight" /></xsl:when>
 					<xsl:when test="class = 7"><img src="stats/icon/class/7.gif" alt="Shaman" /></xsl:when>
 					<xsl:when test="class = 8"><img src="stats/icon/class/8.gif" alt="Mage" /></xsl:when>
 					<xsl:when test="class = 9"><img src="stats/icon/class/9.gif" alt="Warlock" /></xsl:when>
@@ -126,7 +127,7 @@
 				<xsl:choose>
 					<xsl:when test="permissions = 1">Guide</xsl:when>
 					<xsl:when test="permissions = 2">GM</xsl:when>
-					<xsl:when test="permissions = 3">GM</xsl:when>
+					<xsl:when test="permissions = 3">Admin</xsl:when>
 				</xsl:choose>
 
 			</td>
@@ -197,6 +198,7 @@
 					<xsl:when test="class = 3"><img src="stats/icon/class/3.gif" alt="Hunter" /></xsl:when>
 					<xsl:when test="class = 4"><img src="stats/icon/class/4.gif" alt="Rogue" /></xsl:when>
 					<xsl:when test="class = 5"><img src="stats/icon/class/5.gif" alt="Priest" /></xsl:when>
+					<xsl:when test="class = 6"><img src="stats/icon/class/6.gif" alt="Death Knight" /></xsl:when>
 					<xsl:when test="class = 7"><img src="stats/icon/class/7.gif" alt="Shaman" /></xsl:when>
 					<xsl:when test="class = 8"><img src="stats/icon/class/8.gif" alt="Mage" /></xsl:when>
 					<xsl:when test="class = 9"><img src="stats/icon/class/9.gif" alt="Warlock" /></xsl:when>
@@ -219,7 +221,7 @@
 					<xsl:when test="pvprank = 12"><img src="stats/icon/pvpranks/rank12.gif" alt="Marshal - General" /></xsl:when>
 					<xsl:when test="pvprank = 13"><img src="stats/icon/pvpranks/rank13.gif" alt="Field Marshal - Warlord" /></xsl:when>
 					<xsl:when test="pvprank = 14"><img src="stats/icon/pvpranks/rank14.gif" alt="Grand Marshal - High Warlord" /></xsl:when>
-					<xsl:when test="pvprank = 15"><img src="stats/icon/pvpranks/rank15.gif" alt="??" /></xsl:when>
+					<xsl:when test="pvprank = 15"><img src="stats/icon/pvpranks/rank15.gif" alt="Unknown" /></xsl:when>
 					<xsl:otherwise>
 						<xsl:choose>
 							<xsl:when test="race = 1 or race = 3 or race = 4 or race = 7 or race = 11"><img src="stats/icon/pvpranks/rank_default_0.gif" alt="Alliance" /></xsl:when>

@@ -1,4 +1,5 @@
 <?php
+$Address = 'your.domain.name/folder'; // Stats script root folder
 $Hostname = 'x.x.x.x'; // MySQL DB Server IP/Domain
 $Username = 'user'; // MySQL Username
 $Password = 'pass'; // MySQL Password
@@ -108,8 +109,8 @@ $DatabaseEncoding = 'utf8';
 	echo "<tr class=\"{$css}\">
 	<td align=\"left\" width=\"25px\">".$row."</td>
 	<td align=\"left\" width=\"180px\"><b>".$result['name']."</b></td>
-    <td align=\"center\" valign=\"middle\" width=\"30px\"><img src=\"mod_richest/c_icons/".$result['race']."-".$result['gender'].".gif\"></td>
-    <td align=\"center\" valign=\"middle\" width=\"30px\"><img src=\"mod_richest/c_icons/".$result['class'].".gif\"></td>
+    <td align=\"center\" valign=\"middle\" width=\"30px\"><img src=\"stats/img/icon/race/".$result['race']."-".$result['gender'].".gif\"></td>
+    <td align=\"center\" valign=\"middle\" width=\"30px\"><img src=\"stats/img/icon/class/".$result['class'].".gif\"></td>
     <td align=\"center\" valign=\"middle\" width=\"30px\">".$level_out."</td>
     <td align=\"center\" valign=\"middle\" width=\"45px\">".$latency."</td>
     </tr>";
