@@ -23,7 +23,7 @@ echo '<table width=\"100%\" border=0 cellspacing=0 cellpadding=3>
 fclose($sock);
 } 
 
-if (! $sock = @fsockopen($aip_auth, $port_auth, $num, $error, 3)) 
+if (! $sock = @fsockopen($ip_auth, $port_auth, $num, $error, 3)) 
 echo '<table width=\"100%\" border=0 cellspacing=0 cellpadding=3>
   <tr>
     <td align=\"left\" valign=\"middle\">Login Server:</td>
@@ -40,8 +40,8 @@ fclose($sock);
 <?php
 // MySQL settings
 $WoWHostname = "x.x.x.x"; // MySQL server address
-$WoWUsername = "username"; // MySQL username
-$WoWPassword = "password"; // MySQL password
+$WoWUsername = "user"; // MySQL username
+$WoWPassword = "pass"; // MySQL password
 $CharacterDatabase = 'characters'; // TC characters database
 $RealmDatabase = 'realmd'; // TC relamd database
 $WorldDatabase = 'world'; // TC world database
@@ -56,7 +56,6 @@ $sql = "SELECT * FROM `characters` WHERE `online` = 1 ORDER BY `name`";
 $result = mysql_query($sql, $WoWconn) or die('Query failed: ' . mysql_error());
 
 $count = 0;
-
 ?>
   
 <?php
@@ -71,6 +70,7 @@ $db_result = mysql_query("SET NAMES $CharacterDatabaseEncoding", $world_db);
 $uptime_query = mysql_query("SELECT * FROM $RealmDatabase.`uptime` ORDER BY `starttime` DESC LIMIT 1", $realm_db)or die(mysql_error()); 
 $uptime_results = mysql_fetch_array($uptime_query); 
 $maxplayers =  $uptime_results['maxplayers'];
+
 if ($uptime_results['uptime'] > 86400) { //days
     $uptime =  round(($uptime_results['uptime'] / 24 / 60 / 60),2)." Days";
 }
@@ -90,26 +90,26 @@ $total = $horde + $alliance;
 echo "<table width=\"100%\" border=0 cellspacing=0 cellpadding=3>
   <tr>
     <td align=\"left\" valign=\"middle\">Uptime:</td>
-    <td align=\"left\" valign=\"middle\">" . $uptime . "</td>
+    <td align=\"left\" valign=\"middle\">". $uptime ."</td>
   <tr>
     <td align=\"left\" valign=\"middle\">Players online:</td>
-    <td align=\"left\" valign=\"middle\"><b>" . $total . "</b></td>
+    <td align=\"left\" valign=\"middle\"><b>". $total ."</b></td>
   </tr>
   </tr>
   <tr>
     <td align=\"left\" valign=\"middle\">Max online:</td>
-    <td align=\"left\" valign=\"middle\"><b>" . $maxplayers . "</b></td>
+    <td align=\"left\" valign=\"middle\"><b>". $maxplayers ."</b></td>
   </tr>
   </table>
   <br>
   <table width=\"120\" border=0 cellspacing=0 cellpadding=3>
   <tr>
-    <td align=\"center\" valign=\"bottom\"><div align=center><img src=\"http://".$address."/cms/modules/mod_realmcore/images/alliance_small.gif\"><br><b><FONT COLOR=blue>Alliance</font></b></div></td>
-    <td align=\"center\" valign=\"bottom\"><div align=center><img src=\"http://".$address."/cms/modules/mod_realmcore/images/horde_small.gif\"><br><b><FONT COLOR=red>Horde</font></b></div></td>
+    <td align=\"center\" valign=\"bottom\"><div align=center><img src=\"http://". $address ."/cms/modules/mod_realmcore/images/alliance_small.gif\"><br><b><FONT COLOR=blue>Alliance</font></b></div></td>
+    <td align=\"center\" valign=\"bottom\"><div align=center><img src=\"http://". $address ."/cms/modules/mod_realmcore/images/horde_small.gif\"><br><b><FONT COLOR=red>Horde</font></b></div></td>
   </tr>
   <tr>
-    <td align=\"center\" valign=\"bottom\"><b><div align=center>" . $alliance . "</div></b></td>
-    <td align=\"center\" valign=\"bottom\"><b><div align=center>" . $horde . "</div></b></td>
+    <td align=\"center\" valign=\"bottom\"><b><div align=center>". $alliance ."</div></b></td>
+    <td align=\"center\" valign=\"bottom\"><b><div align=center>". $horde ."</div></b></td>
   </tr>
 </table>";
 ?>

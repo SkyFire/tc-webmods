@@ -15,12 +15,12 @@ if (! $sock = @fsockopen($ip_world, $port_world, $num, $error, 3))
 echo '<table width=\"100%\" border=0 cellspacing=0 cellpadding=3>
   <tr>
     <td align=\"left\" valign=\"middle\">Game Server:</td>
-	<td align=\"left\" valign=\"middle\"><img src="http://'.$address.'/mod_realmcore/images/wow_off.png"></td></tr>'; 
+	<td align=\"left\" valign=\"middle\"><img src="http://'. $address .'/mod_realmcore/images/wow_off.png"></td></tr>'; 
 else{ 
 echo '<table width=\"100%\" border=0 cellspacing=0 cellpadding=3>
   <tr>
     <td align=\"left\" valign=\"middle\">Game Server:</td>
-	<td align=\"left\" valign=\"middle\"><img src="http://'.$address.'/mod_realmcore/images/wow_on.png"></td></tr>'; 
+	<td align=\"left\" valign=\"middle\"><img src="http://'. $address .'/mod_realmcore/images/wow_on.png"></td></tr>'; 
 fclose($sock);
 } 
 
