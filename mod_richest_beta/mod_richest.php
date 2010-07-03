@@ -12,7 +12,7 @@ $img_base = "mod_richest/c_icons/";                // images path, with trailing
 
 $result_name_realm = "Your Server Name";
 
-define(_LIST_RICH,"<br>Top 5 Richest<br><span class=\"navigation\">[GM's are excluded]</span>");
+define(_LIST_RICH,"<br>Top ". $limit ." Richest<br><span class=\"navigation\">[GM's are excluded]</span>");
 
 define(_NAME,"name");
 define(_RACE,"race");
