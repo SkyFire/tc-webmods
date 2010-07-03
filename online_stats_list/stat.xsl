@@ -80,46 +80,46 @@
 				<xsl:choose>
 					<xsl:when test="gender = 1">
 						<xsl:choose>
-							<xsl:when test="race = 1"><img src="stats/icon/race/1-1.gif" alt="Human" /></xsl:when>
-							<xsl:when test="race = 2"><img src="stats/icon/race/2-1.gif" alt="Orc" /></xsl:when>
-							<xsl:when test="race = 3"><img src="stats/icon/race/3-1.gif" alt="Dwarf" /></xsl:when>
-							<xsl:when test="race = 4"><img src="stats/icon/race/4-1.gif" alt="Night Elf" /></xsl:when>
-							<xsl:when test="race = 5"><img src="stats/icon/race/5-1.gif" alt="Undead" /></xsl:when>
-							<xsl:when test="race = 6"><img src="stats/icon/race/6-1.gif" alt="Tauren" /></xsl:when>
-							<xsl:when test="race = 7"><img src="stats/icon/race/7-1.gif" alt="Gnome" /></xsl:when>
-							<xsl:when test="race = 8"><img src="stats/icon/race/8-1.gif" alt="Troll" /></xsl:when>
-							<xsl:when test="race = 10"><img src="stats/icon/race/10-1.gif" alt="Blood Elf" /></xsl:when>
-							<xsl:when test="race = 11"><img src="stats/icon/race/11-1.gif" alt="Draenei" /></xsl:when>
+							<xsl:when test="race = 1"><img src="img/icon/race/1-1.gif" alt="Human" /></xsl:when>
+							<xsl:when test="race = 2"><img src="img/icon/race/2-1.gif" alt="Orc" /></xsl:when>
+							<xsl:when test="race = 3"><img src="img/icon/race/3-1.gif" alt="Dwarf" /></xsl:when>
+							<xsl:when test="race = 4"><img src="img/icon/race/4-1.gif" alt="Night Elf" /></xsl:when>
+							<xsl:when test="race = 5"><img src="img/icon/race/5-1.gif" alt="Undead" /></xsl:when>
+							<xsl:when test="race = 6"><img src="img/icon/race/6-1.gif" alt="Tauren" /></xsl:when>
+							<xsl:when test="race = 7"><img src="img/icon/race/7-1.gif" alt="Gnome" /></xsl:when>
+							<xsl:when test="race = 8"><img src="img/icon/race/8-1.gif" alt="Troll" /></xsl:when>
+							<xsl:when test="race = 10"><img src="img/icon/race/10-1.gif" alt="Blood Elf" /></xsl:when>
+							<xsl:when test="race = 11"><img src="img/icon/race/11-1.gif" alt="Draenei" /></xsl:when>
 						</xsl:choose>
 					</xsl:when>
 					<xsl:otherwise>
 						<xsl:choose>
-							<xsl:when test="race = 1"><img src="stats/icon/race/1-0.gif" alt="Human" /></xsl:when>
-							<xsl:when test="race = 2"><img src="stats/icon/race/2-0.gif" alt="Orc" /></xsl:when>
-							<xsl:when test="race = 3"><img src="stats/icon/race/3-0.gif" alt="Dwarf" /></xsl:when>
-							<xsl:when test="race = 4"><img src="stats/icon/race/4-0.gif" alt="Night Elf" /></xsl:when>
-							<xsl:when test="race = 5"><img src="stats/icon/race/5-0.gif" alt="Undead" /></xsl:when>
-							<xsl:when test="race = 6"><img src="stats/icon/race/6-0.gif" alt="Tauren" /></xsl:when>
-							<xsl:when test="race = 7"><img src="stats/icon/race/7-0.gif" alt="Gnome" /></xsl:when>
-							<xsl:when test="race = 8"><img src="stats/icon/race/8-0.gif" alt="Troll" /></xsl:when>
-							<xsl:when test="race = 10"><img src="stats/icon/race/10-0.gif" alt="Blood Elf" /></xsl:when>
-							<xsl:when test="race = 11"><img src="stats/icon/race/11-0.gif" alt="Draenei" /></xsl:when>
+							<xsl:when test="race = 1"><img src="img/icon/race/1-0.gif" alt="Human" /></xsl:when>
+							<xsl:when test="race = 2"><img src="img/icon/race/2-0.gif" alt="Orc" /></xsl:when>
+							<xsl:when test="race = 3"><img src="img/icon/race/3-0.gif" alt="Dwarf" /></xsl:when>
+							<xsl:when test="race = 4"><img src="img/icon/race/4-0.gif" alt="Night Elf" /></xsl:when>
+							<xsl:when test="race = 5"><img src="img/icon/race/5-0.gif" alt="Undead" /></xsl:when>
+							<xsl:when test="race = 6"><img src="img/icon/race/6-0.gif" alt="Tauren" /></xsl:when>
+							<xsl:when test="race = 7"><img src="img/icon/race/7-0.gif" alt="Gnome" /></xsl:when>
+							<xsl:when test="race = 8"><img src="img/icon/race/8-0.gif" alt="Troll" /></xsl:when>
+							<xsl:when test="race = 10"><img src="img/icon/race/10-0.gif" alt="Blood Elf" /></xsl:when>
+							<xsl:when test="race = 11"><img src="img/icon/race/11-0.gif" alt="Draenei" /></xsl:when>
 						</xsl:choose>
 					</xsl:otherwise>
 				</xsl:choose>
 			</td>
 			<td class="stats_td" align="center">
 				<xsl:choose>
-					<xsl:when test="class = 1"><img src="stats/icon/class/1.gif" alt="Warrior" /></xsl:when>
-					<xsl:when test="class = 2"><img src="stats/icon/class/2.gif" alt="Paladin" /></xsl:when>
-					<xsl:when test="class = 3"><img src="stats/icon/class/3.gif" alt="Hunter" /></xsl:when>
-					<xsl:when test="class = 4"><img src="stats/icon/class/4.gif" alt="Rogue" /></xsl:when>
-					<xsl:when test="class = 5"><img src="stats/icon/class/5.gif" alt="Priest" /></xsl:when>
-					<xsl:when test="class = 6"><img src="stats/icon/class/6.gif" alt="Death Knight" /></xsl:when>
-					<xsl:when test="class = 7"><img src="stats/icon/class/7.gif" alt="Shaman" /></xsl:when>
-					<xsl:when test="class = 8"><img src="stats/icon/class/8.gif" alt="Mage" /></xsl:when>
-					<xsl:when test="class = 9"><img src="stats/icon/class/9.gif" alt="Warlock" /></xsl:when>
-					<xsl:when test="class = 11"><img src="stats/icon/class/11.gif" alt="Druid" /></xsl:when>
+					<xsl:when test="class = 1"><img src="img/icon/class/1.gif" alt="Warrior" /></xsl:when>
+					<xsl:when test="class = 2"><img src="img/icon/class/2.gif" alt="Paladin" /></xsl:when>
+					<xsl:when test="class = 3"><img src="img/icon/class/3.gif" alt="Hunter" /></xsl:when>
+					<xsl:when test="class = 4"><img src="img/icon/class/4.gif" alt="Rogue" /></xsl:when>
+					<xsl:when test="class = 5"><img src="img/icon/class/5.gif" alt="Priest" /></xsl:when>
+					<xsl:when test="class = 6"><img src="img/icon/class/6.gif" alt="Death Knight" /></xsl:when>
+					<xsl:when test="class = 7"><img src="img/icon/class/7.gif" alt="Shaman" /></xsl:when>
+					<xsl:when test="class = 8"><img src="img/icon/class/8.gif" alt="Mage" /></xsl:when>
+					<xsl:when test="class = 9"><img src="img/icon/class/9.gif" alt="Warlock" /></xsl:when>
+					<xsl:when test="class = 11"><img src="img/icon/class/11.gif" alt="Druid" /></xsl:when>
 				</xsl:choose>
 			</td>
 			<td class="stats_td" align="center"><xsl:value-of select="level"/></td>
@@ -163,69 +163,69 @@
 				<xsl:choose>
 					<xsl:when test="gender = 1">
 						<xsl:choose>
-							<xsl:when test="race = 1"><img src="stats/icon/race/1-1.gif" alt="Human" /></xsl:when>
-							<xsl:when test="race = 2"><img src="stats/icon/race/2-1.gif" alt="Orc" /></xsl:when>
-							<xsl:when test="race = 3"><img src="stats/icon/race/3-1.gif" alt="Dwarf" /></xsl:when>
-							<xsl:when test="race = 4"><img src="stats/icon/race/4-1.gif" alt="Night Elf" /></xsl:when>
-							<xsl:when test="race = 5"><img src="stats/icon/race/5-1.gif" alt="Undead" /></xsl:when>
-							<xsl:when test="race = 6"><img src="stats/icon/race/6-1.gif" alt="Tauren" /></xsl:when>
-							<xsl:when test="race = 7"><img src="stats/icon/race/7-1.gif" alt="Gnome" /></xsl:when>
-							<xsl:when test="race = 8"><img src="stats/icon/race/8-1.gif" alt="Troll" /></xsl:when>
-							<xsl:when test="race = 10"><img src="stats/icon/race/10-1.gif" alt="Blood Elf" /></xsl:when>
-							<xsl:when test="race = 11"><img src="stats/icon/race/11-1.gif" alt="Draenei" /></xsl:when>
+							<xsl:when test="race = 1"><img src="img/icon/race/1-1.gif" alt="Human" /></xsl:when>
+							<xsl:when test="race = 2"><img src="img/icon/race/2-1.gif" alt="Orc" /></xsl:when>
+							<xsl:when test="race = 3"><img src="img/icon/race/3-1.gif" alt="Dwarf" /></xsl:when>
+							<xsl:when test="race = 4"><img src="img/icon/race/4-1.gif" alt="Night Elf" /></xsl:when>
+							<xsl:when test="race = 5"><img src="img/icon/race/5-1.gif" alt="Undead" /></xsl:when>
+							<xsl:when test="race = 6"><img src="img/icon/race/6-1.gif" alt="Tauren" /></xsl:when>
+							<xsl:when test="race = 7"><img src="img/icon/race/7-1.gif" alt="Gnome" /></xsl:when>
+							<xsl:when test="race = 8"><img src="img/icon/race/8-1.gif" alt="Troll" /></xsl:when>
+							<xsl:when test="race = 10"><img src="img/icon/race/10-1.gif" alt="Blood Elf" /></xsl:when>
+							<xsl:when test="race = 11"><img src="img/icon/race/11-1.gif" alt="Draenei" /></xsl:when>
 						</xsl:choose>
 					</xsl:when>
 					<xsl:otherwise>
 						<xsl:choose>
-							<xsl:when test="race = 1"><img src="stats/icon/race/1-0.gif" alt="Human" /></xsl:when>
-							<xsl:when test="race = 2"><img src="stats/icon/race/2-0.gif" alt="Orc" /></xsl:when>
-							<xsl:when test="race = 3"><img src="stats/icon/race/3-0.gif" alt="Dwarf" /></xsl:when>
-							<xsl:when test="race = 4"><img src="stats/icon/race/4-0.gif" alt="Night Elf" /></xsl:when>
-							<xsl:when test="race = 5"><img src="stats/icon/race/5-0.gif" alt="Undead" /></xsl:when>
-							<xsl:when test="race = 6"><img src="stats/icon/race/6-0.gif" alt="Tauren" /></xsl:when>
-							<xsl:when test="race = 7"><img src="stats/icon/race/7-0.gif" alt="Gnome" /></xsl:when>
-							<xsl:when test="race = 8"><img src="stats/icon/race/8-0.gif" alt="Troll" /></xsl:when>
-							<xsl:when test="race = 10"><img src="stats/icon/race/10-0.gif" alt="Blood Elf" /></xsl:when>
-							<xsl:when test="race = 11"><img src="stats/icon/race/11-0.gif" alt="Draenei" /></xsl:when>
+							<xsl:when test="race = 1"><img src="img/icon/race/1-0.gif" alt="Human" /></xsl:when>
+							<xsl:when test="race = 2"><img src="img/icon/race/2-0.gif" alt="Orc" /></xsl:when>
+							<xsl:when test="race = 3"><img src="img/icon/race/3-0.gif" alt="Dwarf" /></xsl:when>
+							<xsl:when test="race = 4"><img src="img/icon/race/4-0.gif" alt="Night Elf" /></xsl:when>
+							<xsl:when test="race = 5"><img src="img/icon/race/5-0.gif" alt="Undead" /></xsl:when>
+							<xsl:when test="race = 6"><img src="img/icon/race/6-0.gif" alt="Tauren" /></xsl:when>
+							<xsl:when test="race = 7"><img src="img/icon/race/7-0.gif" alt="Gnome" /></xsl:when>
+							<xsl:when test="race = 8"><img src="img/icon/race/8-0.gif" alt="Troll" /></xsl:when>
+							<xsl:when test="race = 10"><img src="img/icon/race/10-0.gif" alt="Blood Elf" /></xsl:when>
+							<xsl:when test="race = 11"><img src="img/icon/race/11-0.gif" alt="Draenei" /></xsl:when>
 						</xsl:choose>
 					</xsl:otherwise>
 				</xsl:choose>
 			</td>
 			<td class="stats_td" align="center">
 				<xsl:choose>
-					<xsl:when test="class = 1"><img src="stats/icon/class/1.gif" alt="Warrior" /></xsl:when>
-					<xsl:when test="class = 2"><img src="stats/icon/class/2.gif" alt="Paladin" /></xsl:when>
-					<xsl:when test="class = 3"><img src="stats/icon/class/3.gif" alt="Hunter" /></xsl:when>
-					<xsl:when test="class = 4"><img src="stats/icon/class/4.gif" alt="Rogue" /></xsl:when>
-					<xsl:when test="class = 5"><img src="stats/icon/class/5.gif" alt="Priest" /></xsl:when>
-					<xsl:when test="class = 6"><img src="stats/icon/class/6.gif" alt="Death Knight" /></xsl:when>
-					<xsl:when test="class = 7"><img src="stats/icon/class/7.gif" alt="Shaman" /></xsl:when>
-					<xsl:when test="class = 8"><img src="stats/icon/class/8.gif" alt="Mage" /></xsl:when>
-					<xsl:when test="class = 9"><img src="stats/icon/class/9.gif" alt="Warlock" /></xsl:when>
-					<xsl:when test="class = 11"><img src="stats/icon/class/11.gif" alt="Druid" /></xsl:when>
+					<xsl:when test="class = 1"><img src="img/icon/class/1.gif" alt="Warrior" /></xsl:when>
+					<xsl:when test="class = 2"><img src="img/icon/class/2.gif" alt="Paladin" /></xsl:when>
+					<xsl:when test="class = 3"><img src="img/icon/class/3.gif" alt="Hunter" /></xsl:when>
+					<xsl:when test="class = 4"><img src="img/icon/class/4.gif" alt="Rogue" /></xsl:when>
+					<xsl:when test="class = 5"><img src="img/icon/class/5.gif" alt="Priest" /></xsl:when>
+					<xsl:when test="class = 6"><img src="img/icon/class/6.gif" alt="Death Knight" /></xsl:when>
+					<xsl:when test="class = 7"><img src="img/icon/class/7.gif" alt="Shaman" /></xsl:when>
+					<xsl:when test="class = 8"><img src="img/icon/class/8.gif" alt="Mage" /></xsl:when>
+					<xsl:when test="class = 9"><img src="img/icon/class/9.gif" alt="Warlock" /></xsl:when>
+					<xsl:when test="class = 11"><img src="img/icon/class/11.gif" alt="Druid" /></xsl:when>
 				</xsl:choose>
 			</td>
 			<td class="stats_td" align="center">
 				<xsl:choose>
-					<xsl:when test="pvprank = 1"><img src="stats/icon/pvpranks/rank1.gif" alt="Private - Scout" /></xsl:when>
-					<xsl:when test="pvprank = 2"><img src="stats/icon/pvpranks/rank2.gif" alt="Corporal - Grunt" /></xsl:when>
-					<xsl:when test="pvprank = 3"><img src="stats/icon/pvpranks/rank3.gif" alt="Sergeant - Sergeant" /></xsl:when>
-					<xsl:when test="pvprank = 4"><img src="stats/icon/pvpranks/rank4.gif" alt="Master Sergeant - Senior Sergeant" /></xsl:when>
-					<xsl:when test="pvprank = 5"><img src="stats/icon/pvpranks/rank5.gif" alt="Sergeant Major - First Sergeant" /></xsl:when>
-					<xsl:when test="pvprank = 6"><img src="stats/icon/pvpranks/rank6.gif" alt="Knight - Stone Guard" /></xsl:when>
-					<xsl:when test="pvprank = 7"><img src="stats/icon/pvpranks/rank7.gif" alt="Knight-Lieutenant - Blood Guard" /></xsl:when>
-					<xsl:when test="pvprank = 8"><img src="stats/icon/pvpranks/rank8.gif" alt="Knight-Captain - Legionnaire" /></xsl:when>
-					<xsl:when test="pvprank = 9"><img src="stats/icon/pvpranks/rank9.gif" alt="Knight-Champion - Centurion" /></xsl:when>
-					<xsl:when test="pvprank = 10"><img src="stats/icon/pvpranks/rank10.gif" alt="Lieutenant - Commander Champion" /></xsl:when>
-					<xsl:when test="pvprank = 11"><img src="stats/icon/pvpranks/rank11.gif" alt="Commander Lieutenant - General" /></xsl:when>
-					<xsl:when test="pvprank = 12"><img src="stats/icon/pvpranks/rank12.gif" alt="Marshal - General" /></xsl:when>
-					<xsl:when test="pvprank = 13"><img src="stats/icon/pvpranks/rank13.gif" alt="Field Marshal - Warlord" /></xsl:when>
-					<xsl:when test="pvprank = 14"><img src="stats/icon/pvpranks/rank14.gif" alt="Grand Marshal - High Warlord" /></xsl:when>
-					<xsl:when test="pvprank = 15"><img src="stats/icon/pvpranks/rank15.gif" alt="Unknown" /></xsl:when>
+					<xsl:when test="pvprank = 1"><img src="img/icon/pvpranks/rank1.gif" alt="Private - Scout" /></xsl:when>
+					<xsl:when test="pvprank = 2"><img src="img/icon/pvpranks/rank2.gif" alt="Corporal - Grunt" /></xsl:when>
+					<xsl:when test="pvprank = 3"><img src="img/icon/pvpranks/rank3.gif" alt="Sergeant - Sergeant" /></xsl:when>
+					<xsl:when test="pvprank = 4"><img src="img/icon/pvpranks/rank4.gif" alt="Master Sergeant - Senior Sergeant" /></xsl:when>
+					<xsl:when test="pvprank = 5"><img src="img/icon/pvpranks/rank5.gif" alt="Sergeant Major - First Sergeant" /></xsl:when>
+					<xsl:when test="pvprank = 6"><img src="img/icon/pvpranks/rank6.gif" alt="Knight - Stone Guard" /></xsl:when>
+					<xsl:when test="pvprank = 7"><img src="img/icon/pvpranks/rank7.gif" alt="Knight-Lieutenant - Blood Guard" /></xsl:when>
+					<xsl:when test="pvprank = 8"><img src="img/icon/pvpranks/rank8.gif" alt="Knight-Captain - Legionnaire" /></xsl:when>
+					<xsl:when test="pvprank = 9"><img src="img/icon/pvpranks/rank9.gif" alt="Knight-Champion - Centurion" /></xsl:when>
+					<xsl:when test="pvprank = 10"><img src="img/icon/pvpranks/rank10.gif" alt="Lieutenant - Commander Champion" /></xsl:when>
+					<xsl:when test="pvprank = 11"><img src="img/icon/pvpranks/rank11.gif" alt="Commander Lieutenant - General" /></xsl:when>
+					<xsl:when test="pvprank = 12"><img src="img/icon/pvpranks/rank12.gif" alt="Marshal - General" /></xsl:when>
+					<xsl:when test="pvprank = 13"><img src="img/icon/pvpranks/rank13.gif" alt="Field Marshal - Warlord" /></xsl:when>
+					<xsl:when test="pvprank = 14"><img src="img/icon/pvpranks/rank14.gif" alt="Grand Marshal - High Warlord" /></xsl:when>
+					<xsl:when test="pvprank = 15"><img src="img/icon/pvpranks/rank15.gif" alt="Unknown" /></xsl:when>
 					<xsl:otherwise>
 						<xsl:choose>
-							<xsl:when test="race = 1 or race = 3 or race = 4 or race = 7 or race = 11"><img src="stats/icon/pvpranks/rank_default_0.gif" alt="Alliance" /></xsl:when>
-							<xsl:when test="race = 2 or race = 5 or race = 6 or race = 8 or race = 10"><img src="stats/icon/pvpranks/rank_default_1.gif" alt="Horde" /></xsl:when>
+							<xsl:when test="race = 1 or race = 3 or race = 4 or race = 7 or race = 11"><img src="img/icon/pvpranks/rank_default_0.gif" alt="Alliance" /></xsl:when>
+							<xsl:when test="race = 2 or race = 5 or race = 6 or race = 8 or race = 10"><img src="img/icon/pvpranks/rank_default_1.gif" alt="Horde" /></xsl:when>
 						</xsl:choose>
 					</xsl:otherwise>
 				</xsl:choose>
