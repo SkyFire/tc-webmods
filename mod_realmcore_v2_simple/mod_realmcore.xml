@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <install type="module" version="1.5.7">
-	<name>Server Status</name>
+	<name>Server Status (Simple)</name>
 	<author>Joomla! Project</author>
 	<creationDate>June 2010</creationDate>
 	<copyright>Copyright (C) 2005 - 2010 Open Source Matters. All rights reserved.</copyright>
@@ -10,12 +10,12 @@
 	<version>1.5.7</version>
 	<description>DESCREALMCORE</description>
 	<files>
-		<filename module="mod_realmcore">mod_realmcore.php</filename>
-	  <filename module="mod_realmcore">mod_realmcore.xml</filename>
-	  <filename module="mod_realmcore">images/alliance_small.gif</filename>
-	  <filename module="mod_realmcore">images/horde_small.gif</filename>
-	  <filename module="mod_realmcore">images/wow_off.png</filename>
-	  <filename module="mod_realmcore">images/wow_on.png</filename>
+		<filename module="mod_realmcore_v2_simple">mod_realmcore.php</filename>
+	  <filename module="mod_realmcore_v2_simple">mod_realmcore.xml</filename>
+	  <filename module="mod_realmcore_v2_simple">images/alliance_small.gif</filename>
+	  <filename module="mod_realmcore_v2_simple">images/horde_small.gif</filename>
+	  <filename module="mod_realmcore_v2_simple">images/wow_off.png</filename>
+	  <filename module="mod_realmcore_v2_simple">images/wow_on.png</filename>
 	</files>
 	<params>
 		<param name="cache" type="list" default="0" label="Caching" description="Select whether to cache the content of this module">

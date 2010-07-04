@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.7">
+	<name>Top Richest Characters</name>
+	<author>Joomla! Project</author>
+	<creationDate>June 2010</creationDate>
+	<copyright>Copyright (C) 2005 - 2010 Open Source Matters. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>madeinslovenia@gmail.com</authorEmail>
+	<authorUrl>www.joomla.org</authorUrl>
+	<version>1.5.7</version>
+	<description>DESCREALMCORE</description>
+	<files>
+		<filename module="mod_richest_v1">mod_richest.php</filename>
+	  <filename module="mod_richest_v1">mod_richest.xml</filename>
+	  <filename module="mod_richest_v1">c_icons/1.gif</filename>
+	  <filename module="mod_richest_v1">c_icons/1-0.gif</filename>
+	  <filename module="mod_richest_v1">c_icons/1-1.gif</filename>
+	  <filename module="mod_richest_v1">c_icons/2.gif</filename>
+  	<filename module="mod_richest_v1">c_icons/2-0.gif</filename>
+	  <filename module="mod_richest_v1">c_icons/2-1.gif</filename>
+	  <filename module="mod_richest_v1">c_icons/3.gif</filename>
+	  <filename module="mod_richest_v1">c_icons/3-0.gif</filename>
+  	<filename module="mod_richest_v1">c_icons/3-1.gif</filename>
+	  <filename module="mod_richest_v1">c_icons/4.gif</filename>
+	  <filename module="mod_richest_v1">c_icons/4-0.gif</filename>
+	  <filename module="mod_richest_v1">c_icons/4-1.gif</filename>
+	  <filename module="mod_richest_v1">c_icons/5.gif</filename>
+	  <filename module="mod_richest_v1">c_icons/5-0.gif</filename>
+	  <filename module="mod_richest_v1">c_icons/5-1.gif</filename>
+	  <filename module="mod_richest_v1">c_icons/6.gif</filename>
+  	<filename module="mod_richest_v1">c_icons/6-0.gif</filename>
+	  <filename module="mod_richest_v1">c_icons/6-1.gif</filename>
+	  <filename module="mod_richest_v1">c_icons/7.gif</filename>
+	  <filename module="mod_richest_v1">c_icons/7-0.gif</filename>
+	  <filename module="mod_richest_v1">c_icons/7-1.gif</filename>
+	  <filename module="mod_richest_v1">c_icons/8.gif</filename>
+	  <filename module="mod_richest_v1">c_icons/8-0.gif</filename>
+	  <filename module="mod_richest_v1">c_icons/8-1.gif</filename>
+	  <filename module="mod_richest_v1">c_icons/9.gif</filename>
+	  <filename module="mod_richest_v1">c_icons/10-0.gif</filename>
+	  <filename module="mod_richest_v1">c_icons/10-1.gif</filename>
+	  <filename module="mod_richest_v1">c_icons/11.gif</filename>
+	  <filename module="mod_richest_v1">c_icons/11-0.gif</filename>
+	  <filename module="mod_richest_v1">c_icons/11-1.gif</filename>
+	  <filename module="mod_richest_v1">c_icons/copper.gif</filename>
+	  <filename module="mod_richest_v1">c_icons/gold.gif</filename>
+	  <filename module="mod_richest_v1">c_icons/silver.gif</filename>
+	  </files>
+	  	<params>
+	  		<param name="cache" type="list" default="0" label="Caching" description="Select whether to cache the content of this module">
+	  			<option value="0">Never</option>
+	  			</param>
+		<param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+	</params>
+</install>
