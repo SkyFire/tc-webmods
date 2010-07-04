@@ -1,18 +1,25 @@
 <?php
 // MYSQL Settings
-$host            = "your.domain.name";        // IP or domain for mysql connection
-$user            = "user";            // db login username
-$password        = "pass";        // db login password
-$db_chars        = "characters";        // name of the chars db
-$db_realm        = "realmd";        // name of the realm db
+$host = "your.domain.name or IP"; // IP or domain for mysql connection
+$user = "user"; // db login username
+$password = "pass"; // db login password
+$db_chars = "characters"; // name of the chars db
+$db_realm = "realmd"; // name of the realm db
+// Script Settings
+$RealmName = "Your Server Name";
+$Limit = 5; // how many characters to list in query
+$ShowOnlineOnly = 1; // show only online characters
+$img_base = "mod_richest/c_icons/"; // images path, with trailing slash
 
-$limit            = 5;                // how many characters to list in query
-
-$img_base = "mod_richest/c_icons/";                // images path, with trailing slash
-
-$result_name_realm = "Your Server Name";
-
-define(_LIST_RICH,"<br>Top ". $limit ." Richest<br><span class=\"navigation\">[GM's are excluded]</span>");
+// Simple IF statement to change the title according to $ShowOnlineOnly setting
+if ($ShowOnlineOnly = 1)
+{
+	define(_LIST_RICH,"<br>Top ". $Limit ." Richest Online<br><span class=\"navigation\">[GM's are excluded]</span>");
+}
+else
+{
+	define(_LIST_RICH,"<br>Top ". $Limit ." Richest<br><span class=\"navigation\">[GM's are excluded]</span>");
+}
 
 define(_NAME,"name");
 define(_RACE,"race");
@@ -55,7 +62,7 @@ function closeshapka() {
 }
 
 OpenTitle();
-print "$result_name_realm";
+print "$RealmName";
 print "<font size=\"2\">"._LIST_RICH."</font>"; // lol </br>
 CloseTitle();
 OpenTable();
@@ -63,7 +70,15 @@ OpenTable();
 $ConnectDB = mysql_connect($host,$user,$password) OR DIE("'Unable to connect to a database...'");
 mysql_select_db($db_chars,$ConnectDB) or die(mysql_error());
 
-$top_char="SELECT `guid` , `account`, `name` , `race` , `class` , `gender` , `level`, `money` FROM `characters` WHERE `account` NOT IN (SELECT `id` FROM ".$db_realm.".`account_access`) ORDER BY `money` DESC LIMIT ".$limit."";
+// Show only online chars SQL according to $ShowOnlineOnly setting
+if ($ShowOnlineOnly = 1)
+{ 
+	$top_char="SELECT `guid` , `account`, `name` , `race` , `class` , `gender` , `level`, `money` FROM `characters` WHERE `account` NOT IN (SELECT `id` FROM ".$db_realm.".`account_access`) AND ".$db_chars.".`online` = 1 ORDER BY `money` DESC LIMIT ".$Limit."";
+}
+else
+{
+	$top_char="SELECT `guid` , `account`, `name` , `race` , `class` , `gender` , `level`, `money` FROM `characters` WHERE `account` NOT IN (SELECT `id` FROM ".$db_realm.".`account_access`) ORDER BY `money` DESC LIMIT ".$Limit."";
+}
 
 $top_res = mysql_query($top_char) or die(mysql_error());
 OpenBody();
