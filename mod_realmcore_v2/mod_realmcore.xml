@@ -10,12 +10,12 @@
 	<version>1.5.7</version>
 	<description>DESCREALMCORE</description>
 	<files>
-		<filename module="mod_realmcore_v2>mod_realmcore.php</filename>
-	  <filename module="mod_realmcore_v2>mod_realmcore.xml</filename>
-	  <filename module="mod_realmcore_v2>images/alliance_small.gif</filename>
-	  <filename module="mod_realmcore_v2>images/horde_small.gif</filename>
-	  <filename module="mod_realmcore_v2>images/wow_off.png</filename>
-	  <filename module="mod_realmcore_v2>images/wow_on.png</filename>
+		<filename module="mod_realmcore_v2">mod_realmcore.php</filename>
+	  <filename module="mod_realmcore_v2">mod_realmcore.xml</filename>
+	  <filename module="mod_realmcore_v2">images/alliance_small.gif</filename>
+	  <filename module="mod_realmcore_v2">images/horde_small.gif</filename>
+	  <filename module="mod_realmcore_v2">images/wow_off.png</filename>
+	  <filename module="mod_realmcore_v2">images/wow_on.png</filename>
 	</files>
 	<params>
 		<param name="cache" type="list" default="0" label="Caching" description="Select whether to cache the content of this module">
