@@ -9,7 +9,7 @@ $db_realm = "realmd"; // name of the realm db
 $RealmName = "Your Server Name";
 $Limit = 5; // how many characters to list in query
 $ShowOnlineOnly = 1; // show only online characters
-$img_base = "mod_richest/c_icons/"; // images path, with trailing slash
+$img_base = "/joomla/modules/mod_richest/c_icons/"; // images path, with trailing slash
 
 // Simple IF statement to change the title according to $ShowOnlineOnly setting
 if ($ShowOnlineOnly = 1)
