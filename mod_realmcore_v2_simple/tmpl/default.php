@@ -1,6 +1,7 @@
+<div align="center">.: Server Status :.</div>
 <?php
-// General server settings
-$address = "your.domain.name";
+// Script root folder (Example: http://www.mydomain.here/joomla/modules/)
+$Address = "http://your.domain.name/script/folder";
 // Enter your Core server IP or Domain
 $ip_world = "x.x.x.x";
 // Enter your Core server port (8085 = Deafult TCWorld Port)
@@ -10,42 +11,42 @@ $ip_auth = "x.x.x.x";
 // Enter your Realm server port (3724 = Deafult TCWorld Port)
 $port_auth = "3724";
 
-if (! $sock = @fsockopen($address, $port_world, $num, $error, 3)) 
-echo '<table width=\"100%\" border=0 cellspacing=0 cellpadding=3>
+if (! $sock = @fsockopen($ip_world, $port_world, $num, $error, 3)) 
+echo "<table width=\"100%\" border=0 cellspacing=0 cellpadding=3>
   <tr>
     <td align=\"left\" valign=\"middle\">Game Server:</td>
-	<td align=\"left\" valign=\"middle\"><img src="http://'.$address.'/mod_realmcore/images/wow_off.png"></td></tr>'; 
+	<td align=\"left\" valign=\"middle\"><img src=\"".$Address."mod_realmcore_v2/images/wow_off.png\"></td></tr>"; 
 else{ 
-echo '<table width=\"100%\" border=0 cellspacing=0 cellpadding=3>
+echo "<table width=\"100%\" border=0 cellspacing=0 cellpadding=3>
   <tr>
     <td align=\"left\" valign=\"middle\">Game Server:</td>
-	<td align=\"left\" valign=\"middle\"><img src="http://'.$address.'/mod_realmcore/images/wow_on.png"></td></tr>'; 
+	<td align=\"left\" valign=\"middle\"><img src=\"".$Address."mod_realmcore_v2/images/wow_on.png\"></td></tr>"; 
 fclose($sock);
 } 
 
-if (! $sock = @fsockopen($address, $port_world, $num, $error, 3)) 
-echo '<table width=\"100%\" border=0 cellspacing=0 cellpadding=3>
+if (! $sock = @fsockopen($ip_auth, $port_auth, $num, $error, 3)) 
+echo "<table width=\"100%\" border=0 cellspacing=0 cellpadding=3>
   <tr>
     <td align=\"left\" valign=\"middle\">Login Server:</td>
-	<td align=\"left\" valign=\"middle\"><img src="http://'. $address .'/mod_realmcore/images/wow_off.png"></td></tr></table>'; 
+	<td align=\"left\" valign=\"middle\"><img src=\"".$Address."mod_realmcore_v2/images/wow_off.png\"></td></tr></table>"; 
 else{ 
-echo '<table width=\"100%\" border=0 cellspacing=0 cellpadding=3>
+echo "<table width=\"100%\" border=0 cellspacing=0 cellpadding=3>
   <tr>
     <td align=\"left\" valign=\"middle\">Login Server:</td>
-	<td align=\"left\" valign=\"middle\"><img src="http://'. $address .'/mod_realmcore/images/wow_on.png"></td></tr></table>'; 
+	<td align=\"left\" valign=\"middle\"><img src=\"".$Address."mod_realmcore_v2/images/wow_on.png\"></td></tr></table>"; 
 fclose($sock);
 }
 ?>
   
 <?php
 // MySQL settings
-$WoWHostname = "your.server.ip";
-$WoWUsername = "root";
-$WoWPassword = "XXXX";
-$CharacterDatabase = 'characters';
-$RealmDatabase = 'realmd';
-$WorldDatabase = 'world';
-$CharacterDatabaseEncoding = 'utf8'; 
+$WoWHostname = "x.x.x.x"; // MySQL server address
+$WoWUsername = "user"; // MySQL username
+$WoWPassword = "pass"; // MySQL password
+$CharacterDatabase = 'characters'; // TC characters database
+$RealmDatabase = 'realmd'; // TC relamd database
+$WorldDatabase = 'world'; // TC world database
+$CharacterDatabaseEncoding = 'utf8'; // database character encoding
 
 // DO NOT EDIT BELOW HERE IF YOU DON'T KNOW WHAT IT IS!!!
 $WoWconn = mysql_connect($WoWHostname, $WoWUsername, $WoWPassword) or die('Connection failed: ' . mysql_error());
@@ -56,7 +57,6 @@ $sql = "SELECT * FROM `characters` WHERE `online` = 1 ORDER BY `name`";
 $result = mysql_query($sql, $WoWconn) or die('Query failed: ' . mysql_error());
 
 $count = 0;
-
 ?>
   
 <?php
@@ -71,6 +71,7 @@ $db_result = mysql_query("SET NAMES $CharacterDatabaseEncoding", $world_db);
 $uptime_query = mysql_query("SELECT * FROM $RealmDatabase.`uptime` ORDER BY `starttime` DESC LIMIT 1", $realm_db)or die(mysql_error()); 
 $uptime_results = mysql_fetch_array($uptime_query); 
 $maxplayers =  $uptime_results['maxplayers'];
+
 if ($uptime_results['uptime'] > 86400) { //days
     $uptime =  round(($uptime_results['uptime'] / 24 / 60 / 60),2)." Days";
 }
@@ -90,26 +91,26 @@ $total = $horde + $alliance;
 echo "<table width=\"100%\" border=0 cellspacing=0 cellpadding=3>
   <tr>
     <td align=\"left\" valign=\"middle\">Uptime:</td>
-    <td align=\"left\" valign=\"middle\">" . $uptime . "</td>
+    <td align=\"left\" valign=\"middle\">". $uptime ."</td>
   <tr>
     <td align=\"left\" valign=\"middle\">Players online:</td>
-    <td align=\"left\" valign=\"middle\"><b>" . $total . "</b></td>
+    <td align=\"left\" valign=\"middle\"><b>". $total ."</b></td>
   </tr>
   </tr>
   <tr>
     <td align=\"left\" valign=\"middle\">Max online:</td>
-    <td align=\"left\" valign=\"middle\"><b>" . $maxplayers . "</b></td>
+    <td align=\"left\" valign=\"middle\"><b>". $maxplayers ."</b></td>
   </tr>
   </table>
   <br>
   <table width=\"120\" border=0 cellspacing=0 cellpadding=3>
   <tr>
-    <td align=\"center\" valign=\"bottom\"><div align=center><img src=\"http://caeserver.servegame.com/cms/modules/mod_realmcore/images/wow/1-0.gif\"><br><b><FONT COLOR=blue>Alliance</font></b></div></td>
-    <td align=\"center\" valign=\"bottom\"><div align=center><img src=\"http://caeserver.servegame.com/cms/modules/mod_realmcore/images/wow/2-0.gif\"><br><b><FONT COLOR=red>Horde</font></b></div></td>
+    <td align=\"center\" valign=\"bottom\"><div align=center><img src=\"".$Address."mod_realmcore_v2/images/alliance_small.gif\"><br><b><FONT COLOR=cyan>Alliance</font></b></div></td>
+    <td align=\"center\" valign=\"bottom\"><div align=center><img src=\"".$Address."mod_realmcore_v2/images/horde_small.gif\"><br><b><FONT COLOR=red>Horde</font></b></div></td>
   </tr>
   <tr>
-    <td align=\"center\" valign=\"bottom\"><b><div align=center>" . $alliance . "</div></b></td>
-    <td align=\"center\" valign=\"bottom\"><b><div align=center>" . $horde . "</div></b></td>
+    <td align=\"center\" valign=\"bottom\"><b><div align=center>". $alliance ."</div></b></td>
+    <td align=\"center\" valign=\"bottom\"><b><div align=center>". $horde ."</div></b></td>
   </tr>
 </table>";
 ?>

@@ -1,7 +1,7 @@
 <div align="center">.: Server Status :.</div>
 <?php
-// General server settings
-$address = "your.domain.name";
+// Script root folder (Example: http://www.mydomain.here/joomla/modules/)
+$Address = "http://your.domain.name/script/folder";
 // Enter your Core server IP or Domain
 $ip_world = "x.x.x.x";
 // Enter your Core server port (8085 = Deafult TCWorld Port)
@@ -12,28 +12,28 @@ $ip_auth = "x.x.x.x";
 $port_auth = "3724";
 
 if (! $sock = @fsockopen($ip_world, $port_world, $num, $error, 3)) 
-echo '<table width=\"100%\" border=0 cellspacing=0 cellpadding=3>
+echo "<table width=\"100%\" border=0 cellspacing=0 cellpadding=3>
   <tr>
     <td align=\"left\" valign=\"middle\">Game Server:</td>
-	<td align=\"left\" valign=\"middle\"><img src="http://'. $address .'/mod_realmcore/images/wow_off.png"></td></tr>'; 
+	<td align=\"left\" valign=\"middle\"><img src=\"".$Address."mod_realmcore_v2/images/wow_off.png\"></td></tr>"; 
 else{ 
-echo '<table width=\"100%\" border=0 cellspacing=0 cellpadding=3>
+echo "<table width=\"100%\" border=0 cellspacing=0 cellpadding=3>
   <tr>
     <td align=\"left\" valign=\"middle\">Game Server:</td>
-	<td align=\"left\" valign=\"middle\"><img src="http://'. $address .'/mod_realmcore/images/wow_on.png"></td></tr>'; 
+	<td align=\"left\" valign=\"middle\"><img src=\"".$Address."mod_realmcore_v2/images/wow_on.png\"></td></tr>"; 
 fclose($sock);
 } 
 
 if (! $sock = @fsockopen($ip_auth, $port_auth, $num, $error, 3)) 
-echo '<table width=\"100%\" border=0 cellspacing=0 cellpadding=3>
+echo "<table width=\"100%\" border=0 cellspacing=0 cellpadding=3>
   <tr>
     <td align=\"left\" valign=\"middle\">Login Server:</td>
-	<td align=\"left\" valign=\"middle\"><img src="http://'. $address .'/mod_realmcore/images/wow_off.png"></td></tr></table>'; 
+	<td align=\"left\" valign=\"middle\"><img src=\"".$Address."mod_realmcore_v2/images/wow_off.png\"></td></tr></table>"; 
 else{ 
-echo '<table width=\"100%\" border=0 cellspacing=0 cellpadding=3>
+echo "<table width=\"100%\" border=0 cellspacing=0 cellpadding=3>
   <tr>
     <td align=\"left\" valign=\"middle\">Login Server:</td>
-	<td align=\"left\" valign=\"middle\"><img src="http://'. $address .'/mod_realmcore/images/wow_on.png"></td></tr></table>'; 
+	<td align=\"left\" valign=\"middle\"><img src=\"".$Address."mod_realmcore_v2/images/wow_on.png\"></td></tr></table>"; 
 fclose($sock);
 }
 ?>
@@ -174,8 +174,8 @@ echo "<br><div align=\"center\" class=\"table-title\">.: Server Details :.</div>
   <br>
   <table width=\"120\" border=0 cellspacing=0 cellpadding=3>
   <tr>
-    <td align=\"center\" valign=\"bottom\"><div align=center><img src=\"http://".$address."/mod_realmcore/images/alliance_small.gif\"><br><b><FONT COLOR=cyan>Alliance</font></b></div></td>
-    <td align=\"center\" valign=\"bottom\"><div align=center><img src=\"http://".$address."/mod_realmcore/images/horde_small.gif\"><br><b><FONT COLOR=red>Horde</font></b></div></td>
+    <td align=\"center\" valign=\"bottom\"><div align=center><img src=\"".$Address."mod_realmcore_v2/images/alliance_small.gif\"><br><b><FONT COLOR=cyan>Alliance</font></b></div></td>
+    <td align=\"center\" valign=\"bottom\"><div align=center><img src=\"".$Address."mod_realmcore_v2/images/horde_small.gif\"><br><b><FONT COLOR=red>Horde</font></b></div></td>
   </tr>
   <tr>
     <td align=\"center\" valign=\"bottom\"><b><div align=center>".$alliance."</b>/".$total_alliance."</div></td>
